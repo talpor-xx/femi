@@ -1,0 +1,16 @@
+package com.femi.femi_poc.rules;
+
+rule "fetch-data-for-contact"
+	dialect "java"
+	salience 1000
+	when
+	   com.femi.femi_poc.model.Applicant($id: id, $area: area)
+	then
+		System.out.println("loading contact details. version 2");
+		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList = com.femi.femi_poc.AccessProxy.fetchContactDetails($id, $area);
+		for (com.femi.femi_poc.model.json.FemiAgreementEntitlement femiAgreementEntitlement: femiAgreementEntitlementList ){
+	    	System.out.println("femiAgreementEntitlement: " + femiAgreementEntitlement);
+		    femiAgreementEntitlement.setCurrentDate(new java.util.Date());
+		    kcontext.getKnowledgeRuntime().insert(femiAgreementEntitlement);
+		}
+end

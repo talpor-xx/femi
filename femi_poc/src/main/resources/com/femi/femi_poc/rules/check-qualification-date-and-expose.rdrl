@@ -1,0 +1,16 @@
+package com.femi.femi_poc.rules;
+
+import java.lang.Number;
+import com.femi.femi_poc.model.json.FemiAgreementEntitlement;
+import java.util.Date;
+import com.femi.femi_poc.model.RequestResult;
+
+rule "check-qualification-date-and-expose"
+	dialect "mvel"
+	when
+		$femiAgreementEntitlement : FemiAgreementEntitlement( qualificationDate2 before $femiAgreementEntitlement.currentDate , expose == "שירות עצמי" )
+		$requestResult : RequestResult( )
+	then
+		System.out.println("the date is before today");
+		$requestResult.addFemiAgreementEntitlement( $femiAgreementEntitlement );
+end
