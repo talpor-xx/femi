@@ -3,9 +3,49 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>C:\Users\taltal/.m2/repository</url>
-        <source>LOCAL</source>
+        <id>jboss-eap-repository</id>
+        <url>file:///c:/jspeed/products/jboss-eap-7.0.0.GA-maven-repository/maven-repository</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>fusesource</id>
+        <url>http://repo.fusesource.com/nexus/content/groups/public</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <source>PROJECT</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-eap-plugin-repository</id>
+        <url>file:///c:/jspeed/products/jboss-eap-7.0.0.GA-maven-repository/maven-repository</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-eap7-repository</id>
+        <url>file:///c:/jspeed/products/jboss-eap-7.0.0.GA-maven-repository/maven-repository</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>brms-64-plugin-repository</id>
+        <url>file:///c:/jspeed/products/jboss-brms-bpmsuite-6.4.0.GA-maven-repository/maven-repository</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
@@ -19,9 +59,33 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>central</id>
-        <url>https://repo.maven.apache.org/maven2</url>
-        <source>PROJECT</source>
+        <id>brms-64-repository</id>
+        <url>file:///c:/jspeed/products/jboss-brms-bpmsuite-6.4.0.GA-maven-repository/maven-repository</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-eap-plugin-repository</id>
+        <url>file:///c:/jspeed/products/jboss-eap-6.3.0.GA-maven-repository</url>
+        <source>SETTINGS</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>local</id>
+        <url>c:\jspeed\products\maven\repo\</url>
+        <source>LOCAL</source>
+      </metadata>
+    </repository>
+    <repository>
+      <include>true</include>
+      <metadata>
+        <id>jboss-eap-repository</id>
+        <url>file:///c:/jspeed/products/jboss-eap-6.3.0.GA-maven-repository</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
   </repositories>
