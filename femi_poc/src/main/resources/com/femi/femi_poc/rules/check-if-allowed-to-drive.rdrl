@@ -1,9 +1,11 @@
 package com.femi.femi_poc.rules;
 
 import java.lang.Number;
+import com.femi.femi_poc.model.Applicant;
 
 rule "check-if-allowed-to-drive"
 	dialect "mvel"
 	when
+		Applicant( area == "תל אביב" )
 	then
 end
