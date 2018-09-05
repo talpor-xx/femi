@@ -1,9 +1,0 @@
-package com.femi.femi_poc.rules;
-
-import java.lang.Number;
-
-rule "aaaa"
-	dialect "mvel"
-	when
-	then
-end
