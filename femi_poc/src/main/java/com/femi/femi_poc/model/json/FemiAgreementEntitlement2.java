@@ -14,6 +14,12 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
 
    private java.util.Date currentDate;
 
+   private com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset;
+
+   private java.lang.String maximumServices;
+
+   private java.lang.String name4;
+
    public FemiAgreementEntitlement2()
    {
    }
@@ -48,12 +54,50 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
       this.currentDate = currentDate;
    }
 
-   public FemiAgreementEntitlement2(java.lang.String id, java.lang.String expose,
-         java.util.Date currentDate)
+   public com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset getListOfFemiAgreementLineItemAsset()
+   {
+      return this.listOfFemiAgreementLineItemAsset;
+   }
+
+   public void setListOfFemiAgreementLineItemAsset(
+         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset)
+   {
+      this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
+   }
+
+   public java.lang.String getMaximumServices()
+   {
+      return this.maximumServices;
+   }
+
+   public void setMaximumServices(java.lang.String maximumServices)
+   {
+      this.maximumServices = maximumServices;
+   }
+
+   public java.lang.String getName4()
+   {
+      return this.name4;
+   }
+
+   public void setName4(java.lang.String name4)
+   {
+      this.name4 = name4;
+   }
+
+   public FemiAgreementEntitlement2(
+         java.lang.String id,
+         java.lang.String expose,
+         java.util.Date currentDate,
+         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset,
+         java.lang.String maximumServices, java.lang.String name4)
    {
       this.id = id;
       this.expose = expose;
       this.currentDate = currentDate;
+      this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
+      this.maximumServices = maximumServices;
+      this.name4 = name4;
    }
 
 }
