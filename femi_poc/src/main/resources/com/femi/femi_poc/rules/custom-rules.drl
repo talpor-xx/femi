@@ -6,11 +6,12 @@ rule "fetch-data-for-contact"
 	when
 	   com.femi.femi_poc.model.Applicant($id: id, $area: area, isFetchContactDataFromProxy==true)
 	then
-		System.out.println("loading contact details. version 2.4");
-		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList = com.femi.femi_poc.AccessProxy.fetchContactDetails($id, $area);
+		System.out.println("femi rules version 2.4");
+/*		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList = com.femi.femi_poc.AccessProxy.fetchContactDetails($id, $area);
 		for (com.femi.femi_poc.model.json.FemiAgreementEntitlement femiAgreementEntitlement: femiAgreementEntitlementList ){
 	    	System.out.println("femiAgreementEntitlement: " + femiAgreementEntitlement);
 		    femiAgreementEntitlement.setCurrentDate(new java.util.Date());
 		    kcontext.getKnowledgeRuntime().insert(femiAgreementEntitlement);
 		}
+*/
 end
