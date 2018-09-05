@@ -9,8 +9,8 @@ rule "check-qualification-date-and-expose"
 	dialect "mvel"
 	when
 		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" )
-		$requestResult : RequestResult( )
+		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
 		System.out.println("the date is before today");
-		$requestResult.addFemiAgreementEntitlement( $femiAgreementEntitlement );
+		$list.add( $femiAgreementEntitlement );
 end
