@@ -20,6 +20,10 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
 
    private java.lang.String name4;
 
+   private java.util.Date qualificationDate2;
+
+   private java.lang.String sumServicesUsage;
+
    public FemiAgreementEntitlement2()
    {
    }
@@ -85,12 +89,33 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
       this.name4 = name4;
    }
 
+   public java.util.Date getQualificationDate2()
+   {
+      return this.qualificationDate2;
+   }
+
+   public void setQualificationDate2(java.util.Date qualificationDate2)
+   {
+      this.qualificationDate2 = qualificationDate2;
+   }
+
+   public java.lang.String getSumServicesUsage()
+   {
+      return this.sumServicesUsage;
+   }
+
+   public void setSumServicesUsage(java.lang.String sumServicesUsage)
+   {
+      this.sumServicesUsage = sumServicesUsage;
+   }
+
    public FemiAgreementEntitlement2(
          java.lang.String id,
          java.lang.String expose,
          java.util.Date currentDate,
          com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset,
-         java.lang.String maximumServices, java.lang.String name4)
+         java.lang.String maximumServices, java.lang.String name4,
+         java.util.Date qualificationDate2, java.lang.String sumServicesUsage)
    {
       this.id = id;
       this.expose = expose;
@@ -98,6 +123,8 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
       this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
       this.maximumServices = maximumServices;
       this.name4 = name4;
+      this.qualificationDate2 = qualificationDate2;
+      this.sumServicesUsage = sumServicesUsage;
    }
 
 }
