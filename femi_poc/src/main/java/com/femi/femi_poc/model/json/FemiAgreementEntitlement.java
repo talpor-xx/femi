@@ -1,108 +1,134 @@
 package com.femi.femi_poc.model.json;
 
 import java.io.Serializable;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import java.util.Date;
 
-public class FemiAgreementEntitlement implements Serializable
-{
+@org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
+@org.kie.api.definition.type.Timestamp("qualificationDate2")
+public class FemiAgreementEntitlement implements Serializable {
 
-   private String id;
-   private String expose;
-   private String maximumServices;
-   private String name4;
-   private String sumServicesUsage;
-   private ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset;
-   private final static long serialVersionUID = 7862339401013262127L;
+	@com.google.gson.annotations.SerializedName("Id")
+	@com.google.gson.annotations.Expose
+	private String id;
+	@com.google.gson.annotations.SerializedName("Expose")
+	@com.google.gson.annotations.Expose
+	private String expose;
+	@com.google.gson.annotations.SerializedName("MaximumServices")
+	@com.google.gson.annotations.Expose
+	private String maximumServices;
+	@com.google.gson.annotations.SerializedName("Name4")
+	@com.google.gson.annotations.Expose
+	private String name4;
+	@com.google.gson.annotations.SerializedName("QualificationDate2")
+	@com.google.gson.annotations.Expose
+	private Date qualificationDate2;
+	@com.google.gson.annotations.SerializedName("SumServicesUsage")
+	@com.google.gson.annotations.Expose
+	private String sumServicesUsage;
+	@com.google.gson.annotations.SerializedName("ListOfFemiAgreementLineItemAsset")
+	@com.google.gson.annotations.Expose
+	private ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset;
+	private final static long serialVersionUID = 7862339401013262127L;
 
-   public String getId()
-   {
-      return id;
-   }
+	private java.util.Date currentDate;
 
-   public void setId(String id)
-   {
-      this.id = id;
-   }
+	public String getId() {
+		return id;
+	}
 
-   public String getExpose()
-   {
-      return expose;
-   }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-   public void setExpose(String expose)
-   {
-      this.expose = expose;
-   }
+	public String getExpose() {
+		return expose;
+	}
 
-   public String getMaximumServices()
-   {
-      return maximumServices;
-   }
+	public void setExpose(String expose) {
+		this.expose = expose;
+	}
 
-   public void setMaximumServices(String maximumServices)
-   {
-      this.maximumServices = maximumServices;
-   }
+	public String getMaximumServices() {
+		return maximumServices;
+	}
 
-   public String getName4()
-   {
-      return name4;
-   }
+	public void setMaximumServices(String maximumServices) {
+		this.maximumServices = maximumServices;
+	}
 
-   public void setName4(String name4)
-   {
-      this.name4 = name4;
-   }
+	public String getName4() {
+		return name4;
+	}
 
-   public String getSumServicesUsage()
-   {
-      return sumServicesUsage;
-   }
+	public void setName4(String name4) {
+		this.name4 = name4;
+	}
 
-   public void setSumServicesUsage(String sumServicesUsage)
-   {
-      this.sumServicesUsage = sumServicesUsage;
-   }
+	public Date getQualificationDate2() {
+		return qualificationDate2;
+	}
 
-   public ListOfFemiAgreementLineItemAsset getListOfFemiAgreementLineItemAsset()
-   {
-      return listOfFemiAgreementLineItemAsset;
-   }
+	public void setQualificationDate2(Date qualificationDate2) {
+		this.qualificationDate2 = qualificationDate2;
+	}
 
-   public void setListOfFemiAgreementLineItemAsset(
-         ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset)
-   {
-      this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
-   }
+	public String getSumServicesUsage() {
+		return sumServicesUsage;
+	}
 
-   @Override
-   public String toString()
-   {
-      return "FemiAgreementEntitlement [id=" + id + ", expose=" + expose
-            + ", maximumServices=" + maximumServices + ", name4=" + name4
-            + ", sumServicesUsage=" + sumServicesUsage
-            + ", listOfFemiAgreementLineItemAsset="
-            + listOfFemiAgreementLineItemAsset + "]";
-   }
+	public void setSumServicesUsage(String sumServicesUsage) {
+		this.sumServicesUsage = sumServicesUsage;
+	}
 
-   public FemiAgreementEntitlement()
-   {
-   }
+	public ListOfFemiAgreementLineItemAsset getListOfFemiAgreementLineItemAsset() {
+		return listOfFemiAgreementLineItemAsset;
+	}
 
-   public FemiAgreementEntitlement(
-         java.lang.String id,
-         java.lang.String expose,
-         java.lang.String maximumServices,
-         java.lang.String name4,
-         java.lang.String sumServicesUsage,
-         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset)
-   {
-      this.id = id;
-      this.expose = expose;
-      this.maximumServices = maximumServices;
-      this.name4 = name4;
-      this.sumServicesUsage = sumServicesUsage;
-      this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
-   }
+	public void setListOfFemiAgreementLineItemAsset(
+			ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset) {
+		this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
+	}
+
+	@Override
+	public String toString() {
+		return "FemiAgreementEntitlement [id=" + id + ", expose=" + expose
+				+ ", maximumServices=" + maximumServices + ", name4=" + name4
+				+ ", qualificationDate2=" + qualificationDate2
+				+ ", sumServicesUsage=" + sumServicesUsage
+				+ ", listOfFemiAgreementLineItemAsset="
+				+ listOfFemiAgreementLineItemAsset + "]";
+	}
+
+	public FemiAgreementEntitlement() {
+	}
+
+	public java.util.Date getCurrentDate() {
+		return this.currentDate;
+	}
+
+	public void setCurrentDate(java.util.Date currentDate) {
+		this.currentDate = currentDate;
+	}
+
+	public FemiAgreementEntitlement(
+			java.lang.String id,
+			java.lang.String expose,
+			java.lang.String maximumServices,
+			java.lang.String name4,
+			java.util.Date qualificationDate2,
+			java.lang.String sumServicesUsage,
+			com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset,
+			java.util.Date currentDate) {
+		this.id = id;
+		this.expose = expose;
+		this.maximumServices = maximumServices;
+		this.name4 = name4;
+		this.qualificationDate2 = qualificationDate2;
+		this.sumServicesUsage = sumServicesUsage;
+		this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
+		this.currentDate = currentDate;
+	}
 
 }
