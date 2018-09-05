@@ -4,7 +4,7 @@ rule "fetch-data-for-contact"
 	dialect "java"
 	salience 1000
 	when
-	   com.femi.femi_poc.model.Applicant($id: id, $area: area)
+	   com.femi.femi_poc.model.Applicant($id: id, $area: area, isFetchContactDataFromProxy==true)
 	then
 		System.out.println("loading contact details. version 2.1");
 		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList = com.femi.femi_poc.AccessProxy.fetchContactDetails($id, $area);
