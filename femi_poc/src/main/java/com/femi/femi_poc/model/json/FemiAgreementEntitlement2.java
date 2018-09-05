@@ -12,6 +12,8 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
    private java.lang.String id;
    private java.lang.String expose;
 
+   private java.util.Date currentDate;
+
    public FemiAgreementEntitlement2()
    {
    }
@@ -36,11 +38,22 @@ public class FemiAgreementEntitlement2 implements java.io.Serializable
       this.expose = expose;
    }
 
-   public FemiAgreementEntitlement2(java.lang.String id,
-         java.lang.String expose)
+   public java.util.Date getCurrentDate()
+   {
+      return this.currentDate;
+   }
+
+   public void setCurrentDate(java.util.Date currentDate)
+   {
+      this.currentDate = currentDate;
+   }
+
+   public FemiAgreementEntitlement2(java.lang.String id, java.lang.String expose,
+         java.util.Date currentDate)
    {
       this.id = id;
       this.expose = expose;
+      this.currentDate = currentDate;
    }
 
 }
