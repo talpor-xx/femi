@@ -15,3 +15,12 @@ rule "fetch-data-for-contact"
 		}
 */
 end
+
+rule "print-FemiAgreementEntitlement"
+	dialect "java"
+	salience 1000
+	when
+	   $femiAgreementEntitlement: com.femi.femi_poc.model.json.FemiAgreementEntitlement()
+	then
+		System.out.println("new femiAgreementEntitlement inserted: " + $femiAgreementEntitlement.getId());
+end
