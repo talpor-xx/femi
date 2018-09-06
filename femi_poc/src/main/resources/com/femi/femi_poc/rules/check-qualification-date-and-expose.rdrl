@@ -8,9 +8,9 @@ import com.femi.femi_poc.model.RequestResult;
 rule "check-qualification-date-and-expose"
 	dialect "mvel"
 	when
-		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" )
+		$femiAgreementEntitlement : FemiAgreementEntitlement( expose != "שירות עצמי" )
 		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
-		System.out.println("the date is before today");
+		System.out.println("the date is before today: " + $femiAgreementEntitlement.getExpose());
 		$list.add( $femiAgreementEntitlement );
 end
