@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.femi</groupId>
   <artifactId>femi_poc</artifactId>
-  <version>4.1</version>
+  <version>4.2</version>
   <packaging>kjar</packaging>
   <name>femi_poc</name>
   <dependencies>
