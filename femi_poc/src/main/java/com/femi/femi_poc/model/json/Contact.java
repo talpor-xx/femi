@@ -2,153 +2,183 @@
 package com.femi.femi_poc.model.json;
 
 import java.io.Serializable;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "Id",
+    "SelfServiceRegisteredFlag",
+    "BirthDate",
+    "CellularPhone",
+    "ContactId",
+    "EmailAddress",
+    "FirstName",
+    "HomePhone",
+    "IDExpirationDate",
+    "IDInformation",
+    "LastName",
+    "PreferredCommunicationMethod",
+    "ListOfFemiAsset-Insurance"
+})
 public class Contact implements Serializable
 {
 
-    @SerializedName("Id")
-    @Expose
+    @JsonProperty("Id")
     private String id;
-    @SerializedName("SelfServiceRegisteredFlag")
-    @Expose
+    @JsonProperty("SelfServiceRegisteredFlag")
     private String selfServiceRegisteredFlag;
-    @SerializedName("BirthDate")
-    @Expose
+    @JsonProperty("BirthDate")
     private String birthDate;
-    @SerializedName("CellularPhone")
-    @Expose
+    @JsonProperty("CellularPhone")
     private String cellularPhone;
-    @SerializedName("ContactId")
-    @Expose
+    @JsonProperty("ContactId")
     private String contactId;
-    @SerializedName("EmailAddress")
-    @Expose
+    @JsonProperty("EmailAddress")
     private String emailAddress;
-    @SerializedName("FirstName")
-    @Expose
+    @JsonProperty("FirstName")
     private String firstName;
-    @SerializedName("HomePhone")
-    @Expose
+    @JsonProperty("HomePhone")
     private String homePhone;
-    @SerializedName("IDExpirationDate")
-    @Expose
+    @JsonProperty("IDExpirationDate")
     private String iDExpirationDate;
-    @SerializedName("IDInformation")
-    @Expose
+    @JsonProperty("IDInformation")
     private String iDInformation;
-    @SerializedName("LastName")
-    @Expose
+    @JsonProperty("LastName")
     private String lastName;
-    @SerializedName("PreferredCommunicationMethod")
-    @Expose
+    @JsonProperty("PreferredCommunicationMethod")
     private String preferredCommunicationMethod;
-    @SerializedName("ListOfFemiAsset-Insurance")
-    @Expose
+    @JsonProperty("ListOfFemiAsset-Insurance")
     private ListOfFemiAssetInsurance listOfFemiAssetInsurance;
     private final static long serialVersionUID = 333777997450167517L;
 
+    @JsonProperty("Id")
     public String getId() {
         return id;
     }
 
+    @JsonProperty("Id")
     public void setId(String id) {
         this.id = id;
     }
 
+    @JsonProperty("SelfServiceRegisteredFlag")
     public String getSelfServiceRegisteredFlag() {
         return selfServiceRegisteredFlag;
     }
 
+    @JsonProperty("SelfServiceRegisteredFlag")
     public void setSelfServiceRegisteredFlag(String selfServiceRegisteredFlag) {
         this.selfServiceRegisteredFlag = selfServiceRegisteredFlag;
     }
 
+    @JsonProperty("BirthDate")
     public String getBirthDate() {
         return birthDate;
     }
 
+    @JsonProperty("BirthDate")
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
+    @JsonProperty("CellularPhone")
     public String getCellularPhone() {
         return cellularPhone;
     }
 
+    @JsonProperty("CellularPhone")
     public void setCellularPhone(String cellularPhone) {
         this.cellularPhone = cellularPhone;
     }
 
+    @JsonProperty("ContactId")
     public String getContactId() {
         return contactId;
     }
 
+    @JsonProperty("ContactId")
     public void setContactId(String contactId) {
         this.contactId = contactId;
     }
 
+    @JsonProperty("EmailAddress")
     public String getEmailAddress() {
         return emailAddress;
     }
 
+    @JsonProperty("EmailAddress")
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
+    @JsonProperty("FirstName")
     public String getFirstName() {
         return firstName;
     }
 
+    @JsonProperty("FirstName")
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    @JsonProperty("HomePhone")
     public String getHomePhone() {
         return homePhone;
     }
 
+    @JsonProperty("HomePhone")
     public void setHomePhone(String homePhone) {
         this.homePhone = homePhone;
     }
 
+    @JsonProperty("IDExpirationDate")
     public String getIDExpirationDate() {
         return iDExpirationDate;
     }
 
+    @JsonProperty("IDExpirationDate")
     public void setIDExpirationDate(String iDExpirationDate) {
         this.iDExpirationDate = iDExpirationDate;
     }
 
+    @JsonProperty("IDInformation")
     public String getIDInformation() {
         return iDInformation;
     }
 
+    @JsonProperty("IDInformation")
     public void setIDInformation(String iDInformation) {
         this.iDInformation = iDInformation;
     }
 
+    @JsonProperty("LastName")
     public String getLastName() {
         return lastName;
     }
 
+    @JsonProperty("LastName")
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    @JsonProperty("PreferredCommunicationMethod")
     public String getPreferredCommunicationMethod() {
         return preferredCommunicationMethod;
     }
 
+    @JsonProperty("PreferredCommunicationMethod")
     public void setPreferredCommunicationMethod(String preferredCommunicationMethod) {
         this.preferredCommunicationMethod = preferredCommunicationMethod;
     }
 
+    @JsonProperty("ListOfFemiAsset-Insurance")
     public ListOfFemiAssetInsurance getListOfFemiAssetInsurance() {
         return listOfFemiAssetInsurance;
     }
 
+    @JsonProperty("ListOfFemiAsset-Insurance")
     public void setListOfFemiAssetInsurance(ListOfFemiAssetInsurance listOfFemiAssetInsurance) {
         this.listOfFemiAssetInsurance = listOfFemiAssetInsurance;
     }
