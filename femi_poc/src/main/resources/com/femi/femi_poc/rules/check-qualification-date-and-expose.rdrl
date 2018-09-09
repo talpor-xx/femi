@@ -11,6 +11,6 @@ rule "check-qualification-date-and-expose"
 		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" )
 		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
-		System.out.println("the date is before today. Expose is: " + $femiAgreementEntitlement.getExpose());
+		System.out.println("rule 'check-qualification-date-and-expose' was executed");
 		$list.add( $femiAgreementEntitlement );
 end
