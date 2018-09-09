@@ -48,6 +48,7 @@ public class AccessProxy {
 			}
 			in.close();
 		} catch (IOException e) {
+		    System.out.println("failed to access the proxy to get Contact information");
 			e.printStackTrace();
 		}
 		return response.toString();
