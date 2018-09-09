@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.net.URLEncoder;
 
+import com.femi.femi_poc.model.json.Contacts;
 import com.femi.femi_poc.model.json.Contact;
 import com.femi.femi_poc.model.json.FemiAgreementEntitlement;
 import com.femi.femi_poc.model.json.FemiAssetInsurance;
@@ -16,9 +17,7 @@ import com.femi.femi_poc.model.json.FemiAssetRider;
 import com.femi.femi_poc.model.json.ListOfFemiAgreementEntitlement;
 import com.femi.femi_poc.model.json.ListOfFemiAssetInsurance;
 import com.femi.femi_poc.model.json.ListOfFemiAssetRider;
-import com.femi.femi_poc.model.json.RootObject;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 public class AccessProxy {
@@ -56,11 +55,17 @@ public class AccessProxy {
 	
 		public static List<FemiAgreementEntitlement> fetchContactDetails(String id, String area) {
 	    	List<FemiAgreementEntitlement> result = null;
-    	    Gson gson = new GsonBuilder().setDateFormat("MM/dd/yyyy").create();
+//    	    Gson gson = new GsonBuilder().setDateFormat("MM/dd/yyyy").create();
 
 			String content = getContactDetails(id, area);
-			RootObject rootObject = gson.fromJson(content, RootObject.class);
-			for (Contact contact : rootObject.getContacts().getContact()) {
+			ObjectMapper mapper = new ObjectMapper();
+		Contacts rootObject = null;
+		try {
+			rootObject = mapper.readValue(content, Contacts.class);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+			for (Contact contact : rootObject.getContact()) {
 				ListOfFemiAssetInsurance listOfFemiAssetInsurance = contact.getListOfFemiAssetInsurance();
 				if (listOfFemiAssetInsurance != null) {
 					FemiAssetInsurance femiAssetInsurance = listOfFemiAssetInsurance.getFemiAssetInsurance();
