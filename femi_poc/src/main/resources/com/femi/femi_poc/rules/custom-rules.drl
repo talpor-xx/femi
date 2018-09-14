@@ -22,5 +22,6 @@ rule "print-FemiAgreementEntitlement"
 	when
 	   $femiAgreementEntitlement: com.femi.femi_poc.model.json.FemiAgreementEntitlement()
 	then
-		System.out.println("new femiAgreementEntitlement inserted: " + $femiAgreementEntitlement.getId() + " date: " + $femiAgreementEntitlement.getCurrentDate());
+		System.out.println("new femiAgreementEntitlement inserted: " + $femiAgreementEntitlement.getId() + " date: " + $femiAgreementEntitlement.getCurrentDate()+
+		", expose: " + $femiAgreementEntitlement.getExpose());
 end
