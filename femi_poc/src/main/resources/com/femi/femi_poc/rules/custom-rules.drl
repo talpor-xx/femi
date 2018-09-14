@@ -8,6 +8,7 @@ rule "fetch-data-for-contact"
 	then
 		System.out.println("femi rules version 3.9");
 		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList = com.femi.femi_poc.AccessProxy.fetchContactDetails($id, $area);
+		System.out.println("proxy returned " + femiAgreementEntitlementList.size() + " femiAgreementEntitlement objects");
 		for (com.femi.femi_poc.model.json.FemiAgreementEntitlement femiAgreementEntitlement: femiAgreementEntitlementList ){
 	    	System.out.println("femiAgreementEntitlement: " + femiAgreementEntitlement);
 		    kcontext.getKnowledgeRuntime().insert(femiAgreementEntitlement);
