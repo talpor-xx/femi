@@ -60,6 +60,10 @@ public class AccessProxy {
 
 			String content = getContactDetails(id, area);
 			ObjectMapper mapper = new ObjectMapper();
+			
+		    java.text.SimpleDateFormat df = new java.text.SimpleDateFormat("MM/dd/yyyy");
+	        mapper.setDateFormat(df);
+	    
 		Contacts rootObject = null;
 		try {
 			rootObject = mapper.readValue(content, Contacts.class);
