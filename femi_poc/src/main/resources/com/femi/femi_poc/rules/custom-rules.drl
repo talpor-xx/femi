@@ -1,5 +1,18 @@
 package com.femi.femi_poc.rules;
 
+
+rule "init-data"
+	dialect "java"
+	salience 1000
+	when
+	
+	then
+	    com.femi.femi_poc.model.GeneralData generalData = new com.femi.femi_poc.model.GeneralData();
+	    kcontext.getKnowledgeRuntime().insert(generalData);
+end
+
+
+
 rule "fetch-data-for-contact"
 	dialect "java"
 	salience 1000
