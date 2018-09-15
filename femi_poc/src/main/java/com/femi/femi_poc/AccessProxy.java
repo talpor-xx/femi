@@ -120,6 +120,12 @@ public class AccessProxy {
 		StringBuilder str = new StringBuilder();
 
 	    //String baseUrl = "http://femi-proxy.apps.openshift.local";
+		String proxyPathEnv = System.getenv("FEMI_PROXY_PATH");
+		System.out.println("proxyPath ENV: " + proxyPathEnv);
+
+		String proxyPathProperty = System.getProperty("femi.proxy.path");
+		System.out.println("proxyPath ENV: " + proxyPathProperty);
+
 	    String baseUrl = "https://femi-proxy-secured.apps.openshift.local";
 	    // http://femi-proxy.apps.openshift.local/api/areas/%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA/contacts/036785343
 
