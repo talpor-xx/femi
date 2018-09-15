@@ -4,11 +4,13 @@ import java.lang.Number;
 import com.femi.femi_poc.model.json.FemiAgreementEntitlement;
 import java.util.Date;
 import com.femi.femi_poc.model.RequestResult;
+import com.femi.femi_poc.model.GeneralData;
 
 rule "check-qualification-date-and-expose"
 	dialect "mvel"
 	when
-		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" )
+		$generalData : GeneralData( )
+		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" , qualificationDate2 before $generalData.currentDate )
 		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
 		System.out.println("rule 'check-qualification-date-and-expose' was executed");
