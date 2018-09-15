@@ -37,39 +37,6 @@ import com.femi.femi_poc.model.json.ListOfFemiAssetRider;
 
 public class AccessProxy {
 
-	/*
-	public static void main(String[] args) throws IOException {		
-		String data = new String(Files.readAllBytes(Paths.get("post.data")));
-
-		ObjectMapper mapper = new ObjectMapper();
-
-	    SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-	    mapper.setDateFormat(df);
-	    
-		Contacts rootObject = null;
-		try {
-			rootObject = mapper.readValue(data, Contacts.class);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println(rootObject);
-		List<FemiAgreementEntitlement> femiAgreementEntitlementList = getContactDetailsWithoutContactsRootElement(
-				rootObject);
-		for (com.femi.femi_poc.model.json.FemiAgreementEntitlement femiAgreementEntitlement : femiAgreementEntitlementList) {
-			System.out.println("femiAgreementEntitlement: " + femiAgreementEntitlement);
-		}
-
-		// read from the proxy server
-		System.out.println("loading contact details. version 2");
-		java.util.List<com.femi.femi_poc.model.json.FemiAgreementEntitlement> femiAgreementEntitlementList2 = com.femi.femi_poc.AccessProxy
-				.fetchContactDetails("036785343", "������");
-		for (com.femi.femi_poc.model.json.FemiAgreementEntitlement femiAgreementEntitlement : femiAgreementEntitlementList2) {
-			System.out.println("femiAgreementEntitlement: " + femiAgreementEntitlement);
-		}
-
-	}
-	*/
-
 	private static class DefaultTrustManager implements X509TrustManager {
 
 
