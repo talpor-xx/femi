@@ -30,8 +30,6 @@ public class FemiAgreementEntitlement implements Serializable
    @com.fasterxml.jackson.annotation.JsonProperty("ListOfFemiAgreementLineItemAsset")
    private ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset;
 
-   @com.fasterxml.jackson.annotation.JsonIgnore
-   private java.util.Date currentDate = new java.util.Date();
    private final static long serialVersionUID = 7862339401013262127L;
 
    @JsonProperty("Id")
@@ -106,12 +104,6 @@ public class FemiAgreementEntitlement implements Serializable
       this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
    }
 
-   @JsonIgnore
-   public java.util.Date getCurrentDate()
-   {
-      return currentDate;
-   }
-
    public java.util.Date getQualificationDate2()
    {
       return this.qualificationDate2;
@@ -133,8 +125,7 @@ public class FemiAgreementEntitlement implements Serializable
          java.lang.String name4,
          java.util.Date qualificationDate2,
          java.lang.String sumServicesUsage,
-         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset,
-         java.util.Date currentDate)
+         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset)
    {
       this.id = id;
       this.expose = expose;
@@ -143,7 +134,6 @@ public class FemiAgreementEntitlement implements Serializable
       this.qualificationDate2 = qualificationDate2;
       this.sumServicesUsage = sumServicesUsage;
       this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
-      this.currentDate = currentDate;
    }
 
 }
