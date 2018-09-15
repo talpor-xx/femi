@@ -107,7 +107,8 @@ public class AccessProxy {
 			e1.printStackTrace();
 		}
 		//String baseUrl = "http://localhost:8282";
-	    String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id;
+		String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id + "?user_key=5947d29d85d6f8a1eefa82992e7a21d0";
+	    //String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id;
 		System.out.println("urlPath: " + urlPath);
 		// String urlPath = "http://localhost:8282/api/areas/health/contacts/" +
 		// id + "?area=" + area;
