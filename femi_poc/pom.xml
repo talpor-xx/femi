@@ -7,13 +7,6 @@
   <version>5.0</version>
   <packaging>kjar</packaging>
   <name>femi_poc</name>
-  <dependencies>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>1.7.2</version>
-    </dependency>
-  </dependencies>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
