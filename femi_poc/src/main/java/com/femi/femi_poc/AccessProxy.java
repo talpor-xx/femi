@@ -95,6 +95,7 @@ public class AccessProxy {
 
 	    String baseUrl = "https://femi-proxy-secured.apps.openshift.local";
 	    if (proxyPathEnv!=null){
+	        System.out.println("setting baseUrl to proxyPathEnv");
 	        baseUrl = proxyPathEnv;
 	    }
 	    // http://femi-proxy.apps.openshift.local/api/areas/%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA/contacts/036785343
