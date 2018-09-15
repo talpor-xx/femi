@@ -13,6 +13,6 @@ rule "check-qualification-date-and-expose"
 		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" , qualificationDate2 before $generalData.currentDate )
 		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
-		System.out.println("rule 'check-qualification-date-and-expose' was executed");
+		System.out.println("rule 'check-qualification-date-and-expose' was executed. generalData.currentDate: " + $generalData.currentDate  );
 		$list.add( $femiAgreementEntitlement );
 end
