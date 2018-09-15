@@ -10,7 +10,7 @@ rule "check-qualification-date-and-expose"
 	dialect "mvel"
 	when
 		$generalData : GeneralData( )
-		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" , qualificationDate2 <= $generalData.currentDate )
+		$femiAgreementEntitlement : FemiAgreementEntitlement( expose == "שירות עצמי" , qualificationDate2 after $generalData.currentDate )
 		$requestResult : RequestResult( $list : femiAgreementEntitlementList)
 	then
 		System.out.println("rule 'check-qualification-date-and-expose' was executed. generalData.currentDate: " + $generalData.currentDate  );
