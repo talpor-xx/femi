@@ -117,14 +117,14 @@ public void setListOfFemiAgreementLineItemAsset(List<ListOfFemiAgreementLineItem
    {
    }
 
-   public FemiAgreementEntitlement(
+     public FemiAgreementEntitlement(
          java.lang.String id,
          java.lang.String expose,
          java.lang.String maximumServices,
          java.lang.String name4,
          java.util.Date qualificationDate2,
          java.lang.String sumServicesUsage,
-         com.femi.femi_poc.model.json.ListOfFemiAgreementLineItemAsset listOfFemiAgreementLineItemAsset)
+         List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset)
    {
       this.id = id;
       this.expose = expose;
