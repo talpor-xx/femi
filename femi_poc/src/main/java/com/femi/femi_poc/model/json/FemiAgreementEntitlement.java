@@ -29,7 +29,7 @@ public class FemiAgreementEntitlement implements Serializable
    @com.fasterxml.jackson.annotation.JsonProperty("SumServicesUsage")
    private String sumServicesUsage;
    @com.fasterxml.jackson.annotation.JsonProperty("ListOfFemiAgreementLineItemAsset")
-   private List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset;
+   private ListOfFemiAgreementLineItemAsset[] listOfFemiAgreementLineItemAsset;
 
    private final static long serialVersionUID = 7862339401013262127L;
 
@@ -94,14 +94,17 @@ public class FemiAgreementEntitlement implements Serializable
    }
 
 @JsonProperty("listOfFemiAgreementLineItemAsset")
-public List<ListOfFemiAgreementLineItemAsset> getListOfFemiAgreementLineItemAsset() {
-return listOfFemiAgreementLineItemAsset;
-}
+  public ListOfFemiAgreementLineItemAsset[] getListOfFemiAgreementLineItemAsset ()
+    {
+        return listOfFemiAgreementLineItemAsset;
+    }
 
 @JsonProperty("listOfFemiAgreementLineItemAsset")
-public void setListOfFemiAgreementLineItemAsset(List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset) {
-    this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
-}
+public void setListOfFemiAgreementLineItemAsset (ListOfFemiAgreementLineItemAsset[] listOfFemiAgreementLineItemAsset)
+    {
+        this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
+    }
+    
 
    public java.util.Date getQualificationDate2()
    {
