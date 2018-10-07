@@ -127,7 +127,7 @@ public void setListOfFemiAgreementLineItemAsset (ListOfFemiAgreementLineItemAsse
          java.lang.String name4,
          java.util.Date qualificationDate2,
          java.lang.String sumServicesUsage,
-         List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset)
+         ListOfFemiAgreementLineItemAsset[] listOfFemiAgreementLineItemAsset)
    {
       this.id = id;
       this.expose = expose;
