@@ -1,9 +1,11 @@
 package com.femi.femi_poc.model.json;
 
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,7 +34,7 @@ public class FemiAgreementEntitlement {
     @JsonProperty("Name4")
     private String name4;
     @JsonProperty("QualificationDate2")
-    private String qualificationDate2;
+    private Date qualificationDate2;
     @JsonProperty("SumServicesUsage")
     private String sumServicesUsage;
     @JsonProperty("ListOfFemiAgreementLineItemAsset")
@@ -81,12 +83,12 @@ public class FemiAgreementEntitlement {
     }
 
     @JsonProperty("QualificationDate2")
-    public String getQualificationDate2() {
+    public Date getQualificationDate2() {
         return qualificationDate2;
     }
 
     @JsonProperty("QualificationDate2")
-    public void setQualificationDate2(String qualificationDate2) {
+    public void setQualificationDate2(Date qualificationDate2) {
         this.qualificationDate2 = qualificationDate2;
     }
 
@@ -119,5 +121,5 @@ public class FemiAgreementEntitlement {
     public void setAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
     }
-
+    
 }
