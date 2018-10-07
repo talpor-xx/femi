@@ -120,20 +120,4 @@ public class FemiAgreementEntitlement {
         this.additionalProperties.put(name, value);
     }
 
-	public FemiAgreementEntitlement(String id, String expose, String maximumServices, String name4,
-			String qualificationDate2, String sumServicesUsage,
-			List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset,
-			Map<String, Object> additionalProperties) {
-		super();
-		this.id = id;
-		this.expose = expose;
-		this.maximumServices = maximumServices;
-		this.name4 = name4;
-		this.qualificationDate2 = qualificationDate2;
-		this.sumServicesUsage = sumServicesUsage;
-		this.listOfFemiAgreementLineItemAsset = listOfFemiAgreementLineItemAsset;
-		this.additionalProperties = additionalProperties;
-	}
-
-    
 }
