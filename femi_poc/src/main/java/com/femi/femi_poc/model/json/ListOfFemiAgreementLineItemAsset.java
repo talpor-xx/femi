@@ -1,6 +1,7 @@
-
 package com.femi.femi_poc.model.json;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -30,7 +31,7 @@ public class ListOfFemiAgreementLineItemAsset {
     @JsonProperty("NumberOfServicesRemaining")
     private String numberOfServicesRemaining;
     @JsonProperty("ListOfFEMIFSAgreementSubItem")
-    private ListOfFEMIFSAgreementSubItem listOfFEMIFSAgreementSubItem;
+    private List<ListOfFEMIFSAgreementSubItem> listOfFEMIFSAgreementSubItem;
     @JsonProperty("Id")
     private String id;
     @JsonProperty("ActivityCount")
@@ -67,12 +68,12 @@ public class ListOfFemiAgreementLineItemAsset {
     }
 
     @JsonProperty("ListOfFEMIFSAgreementSubItem")
-    public ListOfFEMIFSAgreementSubItem getListOfFEMIFSAgreementSubItem() {
+    public List<ListOfFEMIFSAgreementSubItem> getListOfFEMIFSAgreementSubItem() {
         return listOfFEMIFSAgreementSubItem;
     }
 
     @JsonProperty("ListOfFEMIFSAgreementSubItem")
-    public void setListOfFEMIFSAgreementSubItem(ListOfFEMIFSAgreementSubItem listOfFEMIFSAgreementSubItem) {
+    public void setListOfFEMIFSAgreementSubItem(List<ListOfFEMIFSAgreementSubItem> listOfFEMIFSAgreementSubItem) {
         this.listOfFEMIFSAgreementSubItem = listOfFEMIFSAgreementSubItem;
     }
 
