@@ -1,5 +1,5 @@
-package com.femi.femi_poc.model.json;
 
+package com.femi.femi_poc.model.json;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -28,16 +28,16 @@ public class FemiAgreementEntitlement {
     @JsonProperty("Id")
     private String id;
     @JsonProperty("Expose")
-    private String expose;
+    private String Expose;
     @JsonProperty("MaximumServices")
-    private String maximumServices;
+    private String MaximumServices;
     @JsonProperty("Name4")
-    private String name4;
+    private String Name4;
     @JsonProperty("QualificationDate2")
-    private Date qualificationDate2;
+    private Date QualificationDate2;
     @JsonProperty("SumServicesUsage")
-    private String sumServicesUsage;
-    @JsonProperty("ListOfFemiAgreementLineItemAsset")
+    private String SumServicesUsage;
+    @JsonProperty("listOfFemiAgreementLineItemAsset")
     private List<ListOfFemiAgreementLineItemAsset> listOfFemiAgreementLineItemAsset = null;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
@@ -54,52 +54,52 @@ public class FemiAgreementEntitlement {
 
     @JsonProperty("Expose")
     public String getExpose() {
-        return expose;
+        return Expose;
     }
 
     @JsonProperty("Expose")
     public void setExpose(String expose) {
-        this.expose = expose;
+        this.Expose = expose;
     }
 
     @JsonProperty("MaximumServices")
     public String getMaximumServices() {
-        return maximumServices;
+        return MaximumServices;
     }
 
     @JsonProperty("MaximumServices")
     public void setMaximumServices(String maximumServices) {
-        this.maximumServices = maximumServices;
+        this.MaximumServices = maximumServices;
     }
 
     @JsonProperty("Name4")
     public String getName4() {
-        return name4;
+        return Name4;
     }
 
     @JsonProperty("Name4")
     public void setName4(String name4) {
-        this.name4 = name4;
+        this.Name4 = name4;
     }
 
     @JsonProperty("QualificationDate2")
     public Date getQualificationDate2() {
-        return qualificationDate2;
+        return QualificationDate2;
     }
 
     @JsonProperty("QualificationDate2")
     public void setQualificationDate2(Date qualificationDate2) {
-        this.qualificationDate2 = qualificationDate2;
+        this.QualificationDate2 = qualificationDate2;
     }
 
     @JsonProperty("SumServicesUsage")
     public String getSumServicesUsage() {
-        return sumServicesUsage;
+        return SumServicesUsage;
     }
 
     @JsonProperty("SumServicesUsage")
     public void setSumServicesUsage(String sumServicesUsage) {
-        this.sumServicesUsage = sumServicesUsage;
+        this.SumServicesUsage = sumServicesUsage;
     }
 
     @JsonProperty("ListOfFemiAgreementLineItemAsset")
