@@ -87,17 +87,21 @@ public class AccessProxy {
 		StringBuilder str = new StringBuilder();
 
 	    //String baseUrl = "http://femi-proxy.apps.openshift.local";
+	    //String baseUrl = "https://femi-proxy-secured.apps.openshift.local";
+		
 		String proxyPathEnv = System.getenv("FEMI_PROXY_PATH");
 		System.out.println("proxyPath ENV: " + proxyPathEnv);
 
-		String proxyPathProperty = System.getProperty("femi.proxy.path");
-		System.out.println("proxyPath System Property: " + proxyPathProperty);
+		//String proxyPathProperty = System.getProperty("femi.proxy.path");
+		//System.out.println("proxyPath System Property: " + proxyPathProperty);
 
 	    String baseUrl = "https://femi-proxy-secured.apps.openshift.local";
 	    if (proxyPathEnv!=null){
 	        System.out.println("setting baseUrl to proxyPathEnv");
 	        baseUrl = proxyPathEnv;
 	    }
+
+//		String baseUrl = "https://femi-proxy-3scale-apicast-staging.apps.openshift.local";
 	    // http://femi-proxy.apps.openshift.local/api/areas/%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA/contacts/036785343
 
 	    String areaEncodedString = "";
@@ -107,8 +111,10 @@ public class AccessProxy {
 			e1.printStackTrace();
 		}
 		//String baseUrl = "http://localhost:8282";
-		String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id + "?user_key=5947d29d85d6f8a1eefa82992e7a21d0";
-	    //String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id;
+		String user_key = System.getenv("FEMI_USER_KEY");
+
+		//String user_key="59671171c691905055f4f3ffe8ad2846";
+	    String urlPath = baseUrl + "/api/areas/"+ areaEncodedString + "/contacts/" + id + "?user_key=" + user_key;
 		System.out.println("urlPath: " + urlPath);
 		// String urlPath = "http://localhost:8282/api/areas/health/contacts/" +
 		// id + "?area=" + area;
